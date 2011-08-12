@@ -10,6 +10,7 @@ URL:		http://launchpad.net/vortex
 Source0:	RPM-GPG-KEY-VORTEX
 Source1:	vortex.repo
 Requires:	redhat-release >= %{version}
+BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 %description
@@ -24,7 +25,6 @@ This package contains Vortex repository GPG key and yum configuration.
 rm -rf %{buildroot}
 install -D -p -m 0644 RPM-GPG-KEY-VORTEX %{buildroot}%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-VORTEX
 install -D -p -m 0644 vortex.repo %{buildroot}%{_sysconfdir}/yum.repos.d/vortex.repo
-install -D -p -m 0755 .libs/mod_rpaf-2.0.so %{buildroot}%{_libdir}/httpd/modules/mod_rpaf-2.0.so
 
 %clean
 rm -rf %{buildroot}
