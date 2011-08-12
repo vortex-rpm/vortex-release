@@ -4,6 +4,7 @@ Summary:	Vortex repository configuration
 Name:		vortex-release
 Version:	5
 Release:	1.vortex%{?dist}
+Vendor:		Vortex RPM
 License:	GPLv3
 Group:		System Environment/Base
 URL:		http://launchpad.net/vortex
