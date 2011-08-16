@@ -1,7 +1,15 @@
 [vortex]
 name=Vortex repository (EL5) - $basearch
-baseurl=
+baseurl=http://vortex-rpm.org/el5/$basearch
 failovermethod=priority
 enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-VORTEX
+
+[vortex-source]
+name=Vortex repository (EL5) - $basearch
+baseurl=http://vortex-rpm.org/el5/SRPMS
+failovermethod=priority
+enabled=0
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-VORTEX
