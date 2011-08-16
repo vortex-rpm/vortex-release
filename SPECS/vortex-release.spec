@@ -24,8 +24,8 @@ This package contains Vortex repository GPG key and yum configuration.
 
 %install
 rm -rf %{buildroot}
-install -D -p -m 0644 RPM-GPG-KEY-VORTEX %{buildroot}%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-VORTEX
-install -D -p -m 0644 vortex.repo %{buildroot}%{_sysconfdir}/yum.repos.d/vortex.repo
+install -D -p -m 0644 %{SOURCE0} %{buildroot}%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-VORTEX
+install -D -p -m 0644 %{SOURCE1} %{buildroot}%{_sysconfdir}/yum.repos.d/vortex.repo
 
 %clean
 rm -rf %{buildroot}
