@@ -1,0 +1,31 @@
+[vortex]
+name=Vortex repository (EL6) - $basearch
+baseurl=http://vortex-rpm.org/el6/$basearch
+failovermethod=priority
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-VORTEX
+
+[vortex-noarch]
+name=Vortex repository (EL6) - noarch
+baseurl=http://vortex-rpm.org/el6/noarch
+failovermethod=priority
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-VORTEX
+
+[vortex-source]
+name=Vortex repository (EL6) - Source
+baseurl=http://vortex-rpm.org/el6/SRPMS
+failovermethod=priority
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-VORTEX
+
+[vortex-debuginfo]
+name=Vortex repository (EL6) - $basearch debuginfo
+baseurl=http://vortex-rpm.org/el6/debuginfo
+failovermethod=priority
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-VORTEX
