@@ -10,7 +10,7 @@ Group:		System Environment/Base
 URL:		http://vortex-rpm.org/
 Source0:	RPM-GPG-KEY-VORTEX
 Source1:	vortex.repo
-Requires:	redhat-release >= %{version} || sl-release >= %{version}
+Requires:	redhat-release >= %{version}
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
