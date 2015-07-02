@@ -20,8 +20,8 @@ License:	GPLv3
 Group:		System Environment/Base
 URL:		http://vortex-rpm.org/
 Source0:	RPM-GPG-KEY-VORTEX
-%{?el6:Source1: vortex.repo}
-%{?el7:Source1: vortex-el7.repo}
+Source1:    vortex.repo
+Source2:    vortex-el7.repo
 Requires:	redhat-release >= %{version}
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
@@ -37,7 +37,11 @@ This package contains Vortex repository GPG key and yum configuration.
 %install
 rm -rf %{buildroot}
 install -D -p -m 0644 %{SOURCE0} %{buildroot}%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-VORTEX
+%if 0%{?rhel} == 6
 install -D -p -m 0644 %{SOURCE1} %{buildroot}%{_sysconfdir}/yum.repos.d/vortex.repo
+%else
+install -D -p -m 0644 %{SOURCE2} %{buildroot}%{_sysconfdir}/yum.repos.d/vortex.repo
+%endif
 
 %clean
 rm -rf %{buildroot}
