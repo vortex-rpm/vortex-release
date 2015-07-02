@@ -20,7 +20,6 @@ License:	GPLv3
 Group:		System Environment/Base
 URL:		http://vortex-rpm.org/
 Source0:	RPM-GPG-KEY-VORTEX
-Source1:	%{_source1}
 %{?el6:Source1: vortex.repo}
 %{?el7:Source1: vortex-el7.repo}
 Requires:	redhat-release >= %{version}
