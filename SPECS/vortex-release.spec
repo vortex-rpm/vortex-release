@@ -7,13 +7,11 @@ Name:		vortex-release
 
 Version:	6
 Release:	2.vortex%{?dist}
-%global     _source1 vortex.repo
 
 %else
 
 Version:    7
 Release:    2.vortex%{?dist}
-%global     _source1 vortex-el7.repo
 
 %endif
 
@@ -23,6 +21,8 @@ Group:		System Environment/Base
 URL:		http://vortex-rpm.org/
 Source0:	RPM-GPG-KEY-VORTEX
 Source1:	%{_source1}
+%{?el6:Source1: vortex.repo}
+%{?el7:Source1: vortex-el7.repo}
 Requires:	redhat-release >= %{version}
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
