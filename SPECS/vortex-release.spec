@@ -49,9 +49,9 @@ rm -rf %{buildroot}
 %{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-VORTEX
 
 %changelog
-* Thu Jul 2 2015  Ilya Otyutskiy <ilya.otyutskiy@icloud.com> - %{version}-%{release}.vortex
+* Thu Jul 02 2015 Ilya Otyutskiy <ilya.otyutskiy@icloud.com> - %{version}-%{release}
 - Tryig to make it work for both EL6 and EL7.
 
-* Tue Sep 08 2011  Ilya A. Otyutskiy <sharp@thesharp.ru> - 6-1.vortex
+* Tue Sep 08 2011 Ilya A. Otyutskiy <sharp@thesharp.ru> - 6-1.vortex
 - Initial packaging for Enterprise Linux (Closes LP: #843700)
 
